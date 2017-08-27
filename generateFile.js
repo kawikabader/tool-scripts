@@ -5,8 +5,7 @@
 // Using require, as 'import' is not yet supported in NodeJS
 const fs = require('fs');
 
-// Location is set in correlation to where this script is run
-const createdFileLocation = "../test.txt";
+const createdFileLocation = `${process.env.HOME}/Desktop/test.txt`;
 const fileContent = "Hey there!";
 
 fs.writeFile(createdFileLocation, fileContent, err => {
